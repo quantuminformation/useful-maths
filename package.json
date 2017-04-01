@@ -1,0 +1,34 @@
+{
+  "name": "useful-maths",
+  "version": "1.0.0",
+  "description": "<img src=\"https://codeship.com/projects/dbcbad50-f538-0134-5dd6-4eabb52e4bf9/status?branch=master\"/>",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "npm run lint && mocha -r ts-node/register src/test/*.ts",
+    "lint": "tslint 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuantumInformation/useful-maths.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuantumInformation/useful-maths/issues"
+  },
+  "homepage": "https://github.com/QuantumInformation/useful-maths#readme",
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "pre-commit": "^1.2.2",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.2"
+  },
+  "dependencies": {
+    "tslint-config-standard": "^4.0.0"
+  }
+}
