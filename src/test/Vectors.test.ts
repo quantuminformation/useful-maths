@@ -1,21 +1,26 @@
-import * as MathChecks from '../MathChecks'
+import { Vector2 } from '../Vectors'
 
 import { expect } from 'chai'
-import 'mocha'
+import * as assert from 'assert'
 
 describe('Hello function', () => {
   it('should recognise squares', () => {
-    expect(MathChecks.isSquare(1)).to.equal(true)
-    expect(MathChecks.isSquare(4)).to.equal(true)
-    expect(MathChecks.isSquare(9)).to.equal(true)
-    expect(MathChecks.isSquare(16)).to.equal(true)
-    expect(MathChecks.isSquare(81)).to.equal(true)
-    expect(MathChecks.isSquare(100)).to.equal(true)
-    expect(MathChecks.isSquare(2)).to.equal(false)
-    expect(MathChecks.isSquare(3)).to.equal(false)
-    expect(MathChecks.isSquare(5)).to.equal(false)
-    expect(MathChecks.isSquare(0)).to.equal(false)
-    expect(MathChecks.isSquare(-1)).to.equal(false)
-    expect(MathChecks.isSquare(-4)).to.equal(false)
+
+    expect(new Vector2(1, 0).magnitude()).to.equal(1)
+    expect(new Vector2(0, 1).magnitude()).to.equal(1)
+
+    let vector = new Vector2(0, 0)
+    let vector2 = new Vector2(2, 2)
+
+    expect(vector.magnitude()).to.equal(0)
+    let result: Vector2 = vector.add(vector2)
+
+    expect(result.x).to.equal(2)
+    expect(result.y).to.equal(2)
+
+    expect(+result.magnitude().toFixed(4)).to.equal(2.8284)
+    expect(result.addTwo(2, 2).x).to.equal(4)
+    expect(result.addTwo(2, 2).y).to.equal(4)
+    expect(vector2.reverse()).to.deep.equal(new Vector2(-2, -2))
   })
 })

@@ -4,3 +4,7 @@
 
 A TypeScript Math lib that I made for my own purposes, you are fill to jump in.
 
+# Debugging
+
+Install iron-node then run
+iron-node node_modules/.bin/_mocha -r ts-node/register src/test/*.ts
